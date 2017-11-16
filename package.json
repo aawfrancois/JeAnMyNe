@@ -1,0 +1,19 @@
+{
+  "name": "jeanmyne",
+  "version": "1.0.0",
+  "description": "project :: node :: mini",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aawfrancois/JeAnMyNe.git"
+  },
+  "author": "JeAnMyNe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aawfrancois/JeAnMyNe/issues"
+  },
+  "homepage": "https://github.com/aawfrancois/JeAnMyNe#readme"
+}
