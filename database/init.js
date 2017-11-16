@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 
 let db = {};
 
-db.sequelize = new Sequelize('JeAnMyNe', 'antoinefrancois', '', {
+db.sequelize = new Sequelize('JeAnMyNe', 'jeremynoh', '', {
   host: 'localhost', dialect: 'postgres'
 });
 
