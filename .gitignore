@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .DS_Store
+package.json
 # Runtime data
 pids
 *.pid
@@ -58,3 +59,4 @@ typings/
 # dotenv environment variables file
 .env
 
+public/
