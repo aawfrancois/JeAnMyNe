@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aawfrancois/JeAnMyNe/issues"
   },
-  "homepage": "https://github.com/aawfrancois/JeAnMyNe#readme"
+  "homepage": "https://github.com/aawfrancois/JeAnMyNe#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
