@@ -26,11 +26,11 @@ app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     let err = new Error('Not Found');
     err.status = 404;
     next(err);
-});
+});*/
 
 
 // accède a la page index si url : "/" ou "index"
