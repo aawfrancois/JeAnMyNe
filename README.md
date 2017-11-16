@@ -1,0 +1,2 @@
+# JeAnMyNe
+project :: node :: mini
