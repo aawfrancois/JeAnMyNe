@@ -3,7 +3,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const db = require ('./database/init');
+
 const port = process.argv[2] || 8080;
+
+const index = require('./routes/index');
+const users = require('./routes/users');
 
 // ejs
 app.set('views', path.join(__dirname, 'views'));
