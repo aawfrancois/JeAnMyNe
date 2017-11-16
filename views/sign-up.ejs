@@ -12,69 +12,73 @@
             <h3 class="title is-2">
 
 
-
-
                 <div class="columns is-mobile">
                     <div class="column is-half is-offset-one-quarter">
                         <figure class="image is-128x128 container">
-                            <img src="/img/JeAnMyNe.png" />
+                            <img src="/img/JeAnMyNe.png"/>
                         </figure>
                         <br>
-                        <div class="field">
-                            <label class="label">firstname</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="firstname">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">lastname</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="lastname">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">username</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="username">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">password</label>
-                            <div class="control">
-                                <input class="input" type="password" placeholder="password">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">confirm password</label>
-                            <div class="control">
-                                <input class="input" type="password" placeholder="confirm password">
-                            </div>
-                        </div>
-
-
-
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    I agree to the <a href="https://www.nasa.gov/">terms and conditions</a>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <a href="sign-in" class="button is-text">sign in</a>
-                            </div>
-                            <div class="control">
-                                <button class="button is-link">sign up</button>
+                        <form id="mForm" method="POST" action="/sign-up" enctype="application/json">
+                            <div class="field">
+                                <label class="label">firstname</label>
+                                <div class="control">
+                                    <input class="input" id="firstname" name="firstname" type="text"
+                                           placeholder="firstname">
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="field">
+                                <label class="label">lastname</label>
+                                <div class="control">
+                                    <input class="input" id="lastname" name="lastname" type="text"
+                                           placeholder="lastname">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">username</label>
+                                <div class="control">
+                                    <input class="input" id="username" name="username" type="text"
+                                           placeholder="username">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">password</label>
+                                <div class="control">
+                                    <input class="input" id="password" name="password" type="password"
+                                           placeholder="password">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">confirm password</label>
+                                <div class="control">
+                                    <input class="input" id="confirm password" name="confirm password" type="password"
+                                           placeholder="confirm password">
+                                </div>
+                            </div>
+
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        I agree to the <a href="https://www.nasa.gov/">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <a href="sign-in" class="button is-text">sign in</a>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-link">sign up</button>
+                                </div>
+
+                            </div>
+                        </form>
                     </div>
                 </div>
             </h3>
