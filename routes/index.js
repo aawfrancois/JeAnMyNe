@@ -29,6 +29,32 @@ router.post('/sign-up', function (request, response) {
 
 module.exports = router;
 
+// accède a la fonctionnalité sign-in
+router.get('/sign-in', function (request, response) {
+    response.render('sign-in');
+});
+
+
+router.post('/sign-in',(request,response)=>{
+  let userForm = {
+    username: request.body.username,
+    password: request.body.password
+
+  }
+  db.user.findOne({where: {username: userForm.username}}).then(user=>{
+    if(!user){
+      console.log("pas de compte");
+      response.redirect('/sign-in')
+    }
+    else if (user.checkPassword(userForm.password)) {
+      response.redirect('/index')
+    }
+    else {
+      console.log("pas le bon mdp");
+      response.redirect('/sign-in')
+    }
+  })
+})
 
 /*db.user.findOrCreate(where: { email: user.email}}).then(user => {
     if(!user){

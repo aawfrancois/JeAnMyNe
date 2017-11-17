@@ -43,26 +43,16 @@ app.get(/^\/(index)?$/, function (request, response) {
     response.render('index');
 });
 
-// accède a la fonctionnalité sign-in
-app.get('/sign-in', function (request, response) {
-    response.render('sign-in');
-});
 
-app.post('/sign-in', function (request, response) {
-    lol = request.body;
-    console.log(lol);
-    response.render('/',{lol});
 
-});
+// app.post('/sign-in', function (request, response) {
+//     lol = request.body;
+//     console.log(lol);
+//     response.render('/',{lol});
+//
+// });
 
-// accède a la fonctionnalité sign-up
-app.get('/sign-up', function (request, response) {
-    response.render('sign-up');
-});
-app.post('/sign-up', function (request, response) {
-    request.body
-    response.render('sign-up');
-});
+
 
 // accède a la fonctionnalité profile
 app.get('/profile/:id', function (request, response) {
