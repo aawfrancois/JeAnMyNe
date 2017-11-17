@@ -12,32 +12,32 @@ router.get('/', (request, response) => {
 
 // accède a la fonctionnalité sign-up
 router.get('/sign-up', function (request, response) {
-    response.render('sign-up');
+  response.render('sign-up');
 });
 
 
 router.post('/sign-up', function (request, response) {
-    let user = {
-        firstname: request.body.firstname,
-        lastname: request.body.lastname,
-        username: request.body.username,
-        email: request.body.email,
-        password: request.body.password,
-        confirm_password: request.body.confirm_password,
-    };
+  let user = {
+    firstname: request.body.firstname,
+    lastname: request.body.lastname,
+    username: request.body.username,
+    email: request.body.email,
+    password: request.body.password,
+    confirm_password: request.body.confirm_password,
+  };
 
-    db.user.create(user).then(user => {
-        response.redirect('/');
-    }).catch(err => {
-        response.redirect('/sign-up');
-    });
+  db.user.create(user).then(user => {
+    response.redirect('/');
+  }).catch(err => {
+    response.redirect('/sign-up');
+  });
 });
 
 module.exports = router;
 
 // accède a la fonctionnalité sign-in
 router.get('/sign-in', function (request, response) {
-    response.render('sign-in');
+  response.render('sign-in');
 });
 
 
@@ -53,7 +53,8 @@ router.post('/sign-in',(request,response)=>{
       response.redirect('/sign-in')
     }
     else if (user.checkPassword(userForm.password)) {
-      response.redirect('/index')
+      console.log("connecté");
+      response.redirect('/dashboard')
     }
     else {
       console.log("pas le bon mdp");
@@ -63,7 +64,7 @@ router.post('/sign-in',(request,response)=>{
 })
 
 /*db.user.findOrCreate(where: { email: user.email}}).then(user => {
-    if(!user){
+if(!user){
 
-    }
+}
 })*/

@@ -52,7 +52,9 @@ app.get(/^\/(index)?$/, function (request, response) {
 //
 // });
 
-
+app.get('/dashboard', function (request, response) {
+    response.render('dashboard');
+});
 
 // accède a la fonctionnalité profile
 app.get('/profile/:id', function (request, response) {
