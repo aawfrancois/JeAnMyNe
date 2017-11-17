@@ -18,6 +18,10 @@ router.get('/profile/:id', function (request, response) {
     response.render('profile');
 });
 
+router.get('/dashboard/:id', function (request, response) {
+    response.render('dashboard');
+});
+
 
 
 module.exports = router;

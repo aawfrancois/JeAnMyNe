@@ -52,40 +52,9 @@ app.get(/^\/(index)?$/, function (request, response) {
 //
 // });
 
-app.get('/dashboard', function (request, response) {
-    response.render('dashboard');
-});
 
-// accède a la fonctionnalité profile
-app.get('/profile/:id', function (request, response) {
-    response.render('profile');
-});
 
-app.get('/profile/:id/edit', function (request, response) {
-    response.render('edit');
-});
 
-app.put('/profile:id', function (request, response) {
-    response.render('edit');
-});
-app.delete('/profile:id', function (request, response) {
-    response.render('edit');
-});
-
-app.get('/profile:id/modules', function (request, response) {
-    response.render('edit');
-});
-
-app.post('/profile:id/modules', function (request, response) {
-    response.render('edit');
-});
-
-app.delete('/profile:id/modules', function (request, response) {
-    response.render('edit');
-});
-app.put('/profile:id/modules', function (request, response) {
-    response.render('edit');
-});
 
 
 // portListen
