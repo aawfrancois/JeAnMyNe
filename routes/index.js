@@ -33,7 +33,7 @@ router.post('/sign-up', function (request, response) {
   });
 });
 
-module.exports = router;
+
 
 // accède a la fonctionnalité sign-in
 router.get('/sign-in', function (request, response) {
@@ -54,7 +54,12 @@ router.post('/sign-in',(request,response)=>{
     }
     else if (user.checkPassword(userForm.password)) {
       console.log("connecté");
-      response.redirect('/dashboard')
+      // response.redirect('/dashboard')
+      let id = 3
+      let user = db.user.findOne({where: {id :request.params.id}}).then(user=>{
+        response.redirect("/dashboard/:id");
+
+      })
     }
     else {
       console.log("pas le bon mdp");
@@ -63,8 +68,5 @@ router.post('/sign-in',(request,response)=>{
   })
 });
 
-/*db.user.findOrCreate(where: { email: user.email}}).then(user => {
-if(!user){
 
-}
-})*/
+module.exports = router;
