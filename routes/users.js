@@ -13,6 +13,11 @@ router.get('/:name', (request, response) => {
 
 });
 
+// accède a la fonctionnalité profile
+router.get('/profile/:id', function (request, response) {
+    response.render('profile');
+});
+
 
 
 module.exports = router;
