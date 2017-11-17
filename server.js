@@ -49,7 +49,10 @@ app.get('/sign-in', function (request, response) {
 });
 
 app.post('/sign-in', function (request, response) {
-    response.render('sign-in');
+    lol = request.body;
+    console.log(lol);
+    response.render('/',{lol});
+
 });
 
 // accède a la fonctionnalité sign-up

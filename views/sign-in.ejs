@@ -16,28 +16,45 @@
 
           <div class="columns is-mobile">
             <div class="column is-half is-offset-one-quarter">
-
+              <form class="" action="sign-in" method="post">
               <!-- debut formulaire  -->
-              <figure class="image is-128x128">
-                <img src="../public/img/JeAnMyNe.png" />
+              <figure class="image is-128x128 container">
+                <img src="img/JeAnMyNe.png" />
               </figure>
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input class="input" type="email" placeholder="Email">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fa fa-check"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input" type="password" placeholder="Password">
-                  <span class="icon is-small is-left">
+              <br>
+                <div class="field">
+                    <label class="label">Username</label>
+                  <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Username" name="username">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                    <label class="label">password</label>
+                  <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password" name="password">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <a href="sign-up" class="button is-text">sign-up</button>
+                  </div>
+    <div class="control">
+      <button class="button is-link">login</button>
+    </div>
+
+  </div>
 
 
+                    </form>
                     <!-- fin formulaire  -->
                   </div>
                 </div>
