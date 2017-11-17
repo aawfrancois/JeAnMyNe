@@ -55,6 +55,27 @@ app.get(/^\/(index)?$/, function (request, response) {
 
 
 
+app.put('/profile:id', function (request, response) {
+    response.render('edit');
+});
+app.delete('/profile:id', function (request, response) {
+    response.render('edit');
+});
+
+app.get('/profile:id/modules', function (request, response) {
+    response.render('edit');
+});
+
+app.post('/profile:id/modules', function (request, response) {
+    response.render('edit');
+});
+
+app.delete('/profile:id/modules', function (request, response) {
+    response.render('edit');
+});
+app.put('/profile:id/modules', function (request, response) {
+    response.render('edit');
+});
 
 
 // portListen

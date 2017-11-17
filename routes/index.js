@@ -27,7 +27,7 @@ router.post('/sign-up', function (request, response) {
   };
 
   db.user.create(user).then(user => {
-    response.redirect('/');
+    response.redirect('/sign-in');
   }).catch(err => {
     response.redirect('/sign-up');
   });
@@ -46,7 +46,7 @@ router.post('/sign-in',(request,response)=>{
     username: request.body.username,
     password: request.body.password
 
-  }
+  };
   db.user.findOne({where: {username: userForm.username}}).then(user=>{
     if(!user){
       console.log("pas de compte");
@@ -61,7 +61,7 @@ router.post('/sign-in',(request,response)=>{
       response.redirect('/sign-in')
     }
   })
-})
+});
 
 /*db.user.findOrCreate(where: { email: user.email}}).then(user => {
 if(!user){
