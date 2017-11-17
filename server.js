@@ -60,7 +60,7 @@ app.get('/sign-up', function (request, response) {
     response.render('sign-up');
 });
 app.post('/sign-up', function (request, response) {
-    console.log(request.body);
+    request.body
     response.render('sign-up');
 });
 

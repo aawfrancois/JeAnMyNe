@@ -3,14 +3,16 @@ const router  = express.Router();
 
 const db = require('../database/init');
 
-router.get('/:name', (req, res) => {
+router.get('/:name', (request, response) => {
 
   db.user.create({
-    username: req.params.name
+    username: request.params.name
   }).then(() => {
-    res.redirect('/');
+    response.redirect('/');
   });
 
 });
+
+
 
 module.exports = router;
