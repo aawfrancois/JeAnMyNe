@@ -10,6 +10,12 @@ router.get('/', (request, response) => {
   });
 });
 
+// accède a la fonctionnalité sign-up
+router.get('/sign-up', function (request, response) {
+    response.render('sign-up');
+});
+
+
 router.post('/sign-up', function (request, response) {
     let user = {
         firstname: request.body.firstname,
