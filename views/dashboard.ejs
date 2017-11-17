@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
 </head>
 <body>
@@ -20,13 +20,13 @@
                 General
             </p>
             <ul class="menu-list">
-                <li><a href="/users/dashboard/:id" class="is-active">Home</a></li>
+                <li><a href="/users/dashboard/<%= user.id %>" class="is-active">Home</a></li>
             </ul>
             <p class="menu-label">
                 mon compte
             </p>
             <ul class="menu-list">
-                <li><a href="/profil/:id" >Profile</a></li>
+                <li><a href="/users/profile/<%= user.id %>" >Profile</a></li>
                 <li><a href="/modules/:id">Mes modules</a></li>
             </ul>
             <p class="menu-label">
@@ -55,9 +55,12 @@
 
               <br>
               <p><u>DashBoard</u></p>
-
-
-            </div>
+              <p>
+              <%= InfoDate %></p>
+              <br><br>
+              <p>Hello <%= user.lastname %></p>
+              <br>
+              <p>citation : "<%= body.quote %> "</p>
           </div>
         </h3>
       </div>
