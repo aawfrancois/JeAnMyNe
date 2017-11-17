@@ -44,17 +44,6 @@ app.get(/^\/(index)?$/, function (request, response) {
 });
 
 
-
-// app.post('/sign-in', function (request, response) {
-//     lol = request.body;
-//     console.log(lol);
-//     response.render('/',{lol});
-//
-// });
-
-
-
-
 app.put('/profile:id', function (request, response) {
     response.render('edit');
 });
@@ -73,6 +62,7 @@ app.post('/profile:id/modules', function (request, response) {
 app.delete('/profile:id/modules', function (request, response) {
     response.render('edit');
 });
+
 app.put('/profile:id/modules', function (request, response) {
     response.render('edit');
 });

@@ -6,19 +6,21 @@ const bodyParser = require('body-parser');
 
 const db = require('../database/init');
 
-router.get('/:name', (request, response) => {
+router.get('/profile/:id', function (request, response) {
+    let user = db.user.findOne({where: {id: request.params.id}}).then(user => {
+        response.render('profile', {user});
+    });
+});
 
-  db.user.create({
-    username: request.params.name
-  }).then(() => {
-    response.redirect('/');
-  });
+router.delete('/delete/profile/:id', function (request, response) {
+    let id = db.user.destroy({where: {id: request.params.id}}).then(user => {
+        response.render('/');
+    })
 
 });
 
-// accède a la fonctionnalité profile
-router.get('/profile/:id', function (request, response) {
-  response.render('profile');
+router.get('/update/:id', (request, response) => {
+    response.render('editProfile');
 });
 
 router.get('/dashboard/:id', function (request, response) {
