@@ -17,14 +17,15 @@
                     General
                 </p>
                 <ul class="menu-list">
-                    <li><a href="/users/dashboard/:id">Home</a></li>
+                    <li><a href="/users/dashboard/<%= user.id %>">Home</a></li>
                 </ul>
                 <p class="menu-label">
                     Mon compte
                 </p>
                 <ul class="menu-list">
-                    <li><a href="/profil/:id" class="is-active">Profile</a></li>
-                    <li><a href="/modules/:id">Mes modules</a></li>
+                    <li><a href="/users/profile/<%= user.id %>" class="is-active">Profile</a></li>
+                    <li><a href="/users/profile/<%= user.id %>/modules">Mes modules</a></li>
+
                 </ul>
                 <p class="menu-label">
                     Discussion
@@ -51,8 +52,9 @@
                             </h1>
                             <h2 class="subtitle">
                                 <a class="button is-warning" href="/update/<%= user.id %>">edit</a>
-                                <form method="delete">
-                                    <a data-method="delete" class="button is-danger" href="/delete/profile/<%= user.id %>?_method=DELETE">delete</a>
+                                <form method="delete" action="">
+                                    <a data-method="delete" class="button is-danger"
+                                       href="/delete/profile/<%= user.id %>?_method=DELETE">delete</a>
                                 </form>
                             </h2>
                         </div>

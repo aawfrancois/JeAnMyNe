@@ -19,6 +19,13 @@ router.delete('/delete/profile/:id', function (request, response) {
 
 });
 
+router.get('/profile/:id/modules', function (request, response) {
+    let user = db.user.findOne({where: {id: request.params.id}}).then(user => {
+        response.render('modules', {user});
+    });
+
+});
+
 router.get('/update/:id', (request, response) => {
     response.render('editProfile');
 });
@@ -32,6 +39,7 @@ router.get('/dashboard/:id', function (request, response) {
     console.log(body.permalink);
 
     let user = db.user.findOne({where: {id :request.params.id}}).then(user=>{
+        console.log(user);
       response.render('dashboard',{user,InfoDate,body :JSON.parse(body)});
     })
   });
