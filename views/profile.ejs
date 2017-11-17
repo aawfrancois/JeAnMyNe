@@ -6,23 +6,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
 </head>
 <body>
+
 <section class="hero is-fullheight is-primary">
     <div class="hero-body">
-        <div class="columns is-variable bd-klmn-columns is-1">
-            <div class="column is-3">
-                <div class="bd-notification is-primary has-text-centered">
-                    Side
+
+        <!-- debut menu  -->
+        <div class="hero is-info column is-one-quarter">
+            <aside class="menu ">
+                <figure class="image is-128x128 container">
+                    <img src="/img/JeAnMyNe.png"/>
+                </figure>
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li><a href="/dashboard">Home</a></li>
+                </ul>
+                <p class="menu-label">
+                    mon compte
+                </p>
+                <ul class="menu-list">
+                    <li><a href="/profil/:id" class="is-active">Profile</a></li>
+                    <li><a href="/modules/:id">Mes modules</a></li>
+                </ul>
+                <p class="menu-label">
+                    Discussion
+                </p>
+                <ul class="menu-list">
+                    <li><a>Messenger</a></li>
+                </ul>
+                <p class="menu-label">
+                    Etat
+                </p>
+                <ul class="menu-list">
+                    <li><a href="/">Deconnexion</a></li>
+                </ul>
+            </aside>
+        </div>
+        <!-- fin menu -->
+        <div class="container has-text-centered">
+            <h3 class="title is-2">
+
+
+
+
+                <div class="columns is-mobile">
+                    <div class="column is-half is-offset-one-quarter">
+
+                        <br>
+                        <p><u>Profile</u></p>
+
+
+                    </div>
                 </div>
-            </div>
-            <div class="column is-9">
-                <div class="bd-notification is-info has-text-centered">
-                    Main
-                </div>
-            </div>
+            </h3>
         </div>
     </div>
 </section>
 </body>
 </html>
-
-
